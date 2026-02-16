@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const siteBasePath = "/carmen-montano-senate-website";
+const siteUrl = `https://jackson-p-peterson.github.io${siteBasePath}`;
+const socialImagePath = `${siteBasePath}/images/share-card.jpg`;
+
 export const metadata: Metadata = {
-  title: "Carmen Montano for State Senate 2026 | District 10",
+  metadataBase: new URL("https://jackson-p-peterson.github.io"),
+  title: "Carmen Montano for State Senate District 10",
   description:
-    "Carmen Montano is running for California State Senate District 10 to fight for affordable housing, public safety, quality education, and economic opportunity for every family.",
+    "District 10 is at a turning point. Meet Carmen Montano's plan for safer neighborhoods, affordable housing, strong public schools, and a more affordable future.",
+  alternates: {
+    canonical: siteUrl,
+  },
   keywords: [
     "Carmen Montano",
     "State Senate",
@@ -24,18 +32,28 @@ export const metadata: Metadata = {
     "East Bay",
   ],
   openGraph: {
-    title: "Carmen Montano for State Senate 2026",
+    title: "District 10 is at a turning point. Meet Carmen Montano.",
     description:
-      "A community leader fighting for affordable housing, safer neighborhoods, and quality education in District 10.",
+      "Explore Carmen Montano's plan for safer neighborhoods, affordable housing, strong schools, and real accountability in Sacramento.",
+    url: siteUrl,
     type: "website",
     locale: "en_US",
     siteName: "Carmen Montano for Senate 2026",
+    images: [
+      {
+        url: socialImagePath,
+        width: 1200,
+        height: 630,
+        alt: "Carmen Montano for State Senate District 10",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Carmen Montano for State Senate 2026",
+    title: "District 10 is at a turning point. Meet Carmen Montano.",
     description:
-      "A community leader fighting for affordable housing, safer neighborhoods, and quality education in District 10.",
+      "See Carmen Montano's plan for safer neighborhoods, affordable housing, and strong public schools in District 10.",
+    images: [socialImagePath],
   },
   robots: {
     index: true,
