@@ -28,27 +28,27 @@ const navLinks = [
 const districtPhotos = [
   {
     city: "San Jose",
-    image: "/images/district-sanjose.jpg",
+    image: "images/district-sanjose.jpg",
     caption: "Innovation and opportunity",
   },
   {
     city: "Fremont",
-    image: "/images/district-fremont.jpg",
+    image: "images/district-fremont.jpg",
     caption: "Families and neighborhoods",
   },
   {
     city: "Hayward",
-    image: "/images/district-hayward.jpg",
+    image: "images/district-hayward.jpg",
     caption: "Working-class strength",
   },
   {
     city: "Union City",
-    image: "/images/district-unioncity.jpg",
+    image: "images/district-unioncity.jpg",
     caption: "Community-first values",
   },
   {
     city: "Milpitas",
-    image: "/images/district-milpitas.jpg",
+    image: "images/district-milpitas.jpg",
     caption: "Local leadership that delivers",
   },
 ];
@@ -93,8 +93,6 @@ const donationLevels = [25, 50, 100, 250, 500, 1000];
 export default function CampaignHomepage() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [selectedAmount, setSelectedAmount] = useState(100);
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-  const withBasePath = (path: string) => `${basePath}${path}`;
 
   return (
     <div className="min-h-screen bg-[#f5f7fc] text-slate-900">
@@ -170,7 +168,7 @@ export default function CampaignHomepage() {
       <main id="top">
         <section className="relative isolate overflow-hidden bg-slate-950">
           <Image
-            src={withBasePath("/images/district-sanjose.jpg")}
+            src="images/district-sanjose.jpg"
             alt="District 10"
             fill
             className="object-cover opacity-40"
@@ -223,7 +221,7 @@ export default function CampaignHomepage() {
               <div className="absolute -inset-4 rounded-[2.2rem] bg-sky-400/20 blur-2xl" />
               <div className="relative overflow-hidden rounded-[2rem] border border-white/25 bg-white/10 p-3 shadow-2xl backdrop-blur">
                 <Image
-                  src={withBasePath("/images/carmen-portrait.jpeg")}
+                  src="images/carmen-portrait.jpeg"
                   alt="Carmen Montano"
                   width={831}
                   height={1244}
@@ -239,7 +237,7 @@ export default function CampaignHomepage() {
             <div className="grid gap-0 md:grid-cols-5">
               <div className="relative h-52 md:col-span-2 md:h-full">
                 <Image
-                  src={withBasePath("/images/district-fremont.jpg")}
+                  src="images/district-fremont.jpg"
                   alt="Fremont"
                   fill
                   className="object-cover"
@@ -293,7 +291,7 @@ export default function CampaignHomepage() {
                   className={`group relative overflow-hidden rounded-3xl border border-slate-200 bg-slate-900 shadow-md ${spanClass}`}
                 >
                   <Image
-                  src={withBasePath(item.image)}
+                    src={item.image}
                     alt={item.city}
                     width={1600}
                     height={1000}
@@ -352,7 +350,7 @@ export default function CampaignHomepage() {
 
         <section id="about" className="relative overflow-hidden bg-slate-950 py-20 text-white">
           <Image
-            src={withBasePath("/images/district-unioncity.jpg")}
+            src="images/district-unioncity.jpg"
             alt="Community in District 10"
             fill
             className="object-cover opacity-25"
@@ -384,7 +382,7 @@ export default function CampaignHomepage() {
 
             <div className="relative mx-auto max-w-md overflow-hidden rounded-3xl border border-white/20 bg-white/10 p-3 shadow-xl backdrop-blur">
               <Image
-                src={withBasePath("/images/carmen-portrait.jpeg")}
+                src="images/carmen-portrait.jpeg"
                 alt="Mayor Carmen Montano"
                 width={831}
                 height={1244}
